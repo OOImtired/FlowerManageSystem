@@ -1,12 +1,18 @@
 package com.qst.bean;
 
+/**
+* @描述:用户类
+* @创建人:OOImtired
+* @创建时间:2021/1/3
+*/
+
 public class User {
 
     private Integer id;
-    private String username;
-    private String password;
-    private String email;
-    private Integer jurisdiction;
+    private String username;//用户名
+    private String password;//密码
+    private String email;//邮箱
+    private Integer jurisdiction;//用户权限
     public User() {
     }
 

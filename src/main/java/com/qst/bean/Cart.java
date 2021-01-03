@@ -65,9 +65,17 @@ public class Cart {
             cartItem.setTradeTotalPrice( cartItem.getTradePrice().multiply(new BigDecimal( cartItem.getTradeCount() )) ); // 更新总金额
         }
     }
-
-
+    
+    
     public Integer getTotalCount() {
+        /**
+        * @描述:获取商品总数
+        * @参数注释:
+         * @param 
+        * @返回值:totalCount
+        * @创建人:OOImtired
+        * @创建时间:2021/1/3
+        */
         Integer totalCount = 0;
 
         for (Map.Entry<Integer,CartItem>entry : items.entrySet()) {
@@ -79,6 +87,14 @@ public class Cart {
 
 
     public BigDecimal getTotalPrice() {
+        /**
+        * @描述:获取商品总价
+        * @参数注释:
+         * @param
+        * @返回值:totalPrice
+        * @创建人:OOImtired
+        * @创建时间:2021/1/3
+        */
         BigDecimal totalPrice = new BigDecimal(0);
 
         for (Map.Entry<Integer,CartItem>entry : items.entrySet()) {

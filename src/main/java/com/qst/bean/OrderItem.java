@@ -2,14 +2,20 @@ package com.qst.bean;
 
 import java.math.BigDecimal;
 
+/**
+ * @描述:具体订单
+ * @创建人:OOImtired
+ * @创建时间:2021/1/3
+ */
+
 public class OrderItem {
 
     private Integer id;
-    private String name;
-    private Integer count;
-    private BigDecimal price;
-    private BigDecimal totalPrice;
-    private String orderId;
+    private String name;//商品名
+    private Integer count;//数量
+    private BigDecimal price;//单价
+    private BigDecimal totalPrice;//总价
+    private String orderId;//订单号
 
     public OrderItem() {
     }

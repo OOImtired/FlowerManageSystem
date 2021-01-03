@@ -21,6 +21,56 @@
 			})
 	</script>
 
+	<script type="text/javascript">
+		$(function (){
+			var cart = document.getElementById('cart');
+			var cart_tiggle = document.getElementById('cart_tiggle');
+			var timer = null;
+			cart_tiggle.onmouseover = cart.onmouseover = function (){
+				if(timer) clearTimeout(timer)
+					cart_tiggle.style.display = 'block';
+			}
+
+			cart_tiggle.onmouseout = cart.onmouseout = function (){
+				timer = setTimeout(function (){
+					cart_tiggle.style.display = 'none';
+				},0)
+			}
+		})
+		$(function (){
+			var login = document.getElementById('login');
+			var login_tiggle = document.getElementById('login_tiggle');
+			var timer = null;
+			login_tiggle.onmouseover = login.onmouseover = function (){
+				if(timer) clearTimeout(timer)
+				login_tiggle.style.display = 'block';
+			}
+
+			login_tiggle.onmouseout = login.onmouseout = function (){
+				timer = setTimeout(function (){
+					login_tiggle.style.display = 'none';
+				},0)
+			}
+		})
+		$(function (){
+			var register = document.getElementById('register');
+			var register_tiggle = document.getElementById('register_tiggle');
+			var timer = null;
+			register_tiggle.onmouseover = register.onmouseover = function (){
+				if(timer) clearTimeout(timer)
+				register_tiggle.style.display = 'block';
+			}
+
+			register_tiggle.onmouseout = register.onmouseout = function (){
+				timer = setTimeout(function (){
+					register_tiggle.style.display = 'none';
+				},0)
+			}
+		})
+
+
+	</script>
+
 </head>
 <body>
 	
@@ -29,9 +79,12 @@
 			<span class="wel_word" style="font-size: 40px; margin-top: 70px">一间花店</span>
 			<div style="margin-top: 90px">
 				<c:if test="${empty sessionScope.user}">
-					<a href="pages/cart/cart.jsp"><i class="fa fa-shopping-cart" style="font-size: 40px;color: #FCD1D1">&nbsp;</i></a>
-					<a href="pages/user/login.jsp"><i class="fa fa-user" style="font-size: 40px;color: #FCD1D1">&nbsp;</i></a>
-					<a href="pages/user/regist.jsp"><i class="fa fa-user-plus" style="font-size: 40px;color: #FCD1D1"></i></a>
+					<a href="pages/cart/cart.jsp"><i id="cart" class="fa fa-shopping-cart" style="font-size: 40px;color: #FCD1D1">&nbsp;</i></a>
+					<span style="float: left; display: none" id="cart_tiggle">购物车</span>
+					<a href="pages/user/login.jsp"><i id="login" class="fa fa-user" style="font-size: 40px;color: #FCD1D1">&nbsp;</i></a>
+					<span style="float: left; display: none" id="login_tiggle">登录</span>
+					<a href="pages/user/regist.jsp"><i id="register" class="fa fa-user-plus" style="font-size: 40px;color: #FCD1D1"></i></a>
+					<span style="float: left; display: none" id="register_tiggle">注册</span>
 				</c:if>
 				<c:if test="${not empty sessionScope.user}">
 					<span>欢迎<span class="um_span" style="color: #FCD1D1">${sessionScope.user.username}</span>光临一间花店&nbsp;</span>

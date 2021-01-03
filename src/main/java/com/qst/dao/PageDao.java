@@ -9,12 +9,29 @@ import java.util.List;
 public class PageDao {
 
     public static Integer queryForPageTotalCount(){
+        /**
+        * @描述:获取鲜花总数，以记录总数
+        * @参数注释:
+        * @param:
+        * @返回值:java.lang.Integer
+        * @创建人:OOImtired
+        * @创建时间:2021/1/3
+        */
         String sql = "select count(*) from t_flower";
         Number count = (Number) JdbcUtils.getCount(sql);
         return count.intValue();
     }
 
     public static List<Flower> queryForPageItems(int begin, int pageSize){
+        /**
+        * @描述:通过分页开始页和页面大小，展示鲜花
+        * @参数注释:
+        * @param: begin
+         * @param: pageSize
+        * @返回值:java.util.List<com.qst.bean.Flower>
+        * @创建人:OOImtired
+        * @创建时间:2021/1/3
+        */
         String sql="select id, flower_name flowerName, flower_price flowerPrice," +
                 " flower_hot flowerHot, flower_introduction flowerIntroduction," +
                 " flower_sales flowerSales, img_path imgPath "+
@@ -23,12 +40,32 @@ public class PageDao {
     }
 
     public static Integer queryForPageTotalCountByPrice(double min, double max){
+        /**
+        * @描述:通过价格区间查询鲜花
+        * @参数注释:
+        * @param: min
+         * @param: max
+        * @返回值:java.lang.Integer
+        * @创建人:OOImtired
+        * @创建时间:2021/1/3
+        */
         String sql="select count(*) from t_flower where flower_price between ? and ?";
         Number count = (Number) JdbcUtils.getCount(sql,min,max);
         return count.intValue();
     }
 
     public static List<Flower> queryForPageItemsByPrice(int begin, int pageSize, double min, double max){
+        /**
+        * @描述:通过开始页、页面大小、价格区间分页查询鲜花
+        * @参数注释:
+        * @param: begin
+         * @param: pageSize
+         * @param: min
+         * @param: max
+        * @返回值:java.util.List<com.qst.bean.Flower>
+        * @创建人:OOImtired
+        * @创建时间:2021/1/3
+        */
         String sql="select id, flower_name flowerName, flower_price flowerPrice," +
                 " flower_hot flowerHot, flower_introduction flowerIntroduction," +
                 " flower_sales flowerSales, img_path imgPath "+

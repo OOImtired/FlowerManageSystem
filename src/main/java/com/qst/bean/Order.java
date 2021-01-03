@@ -2,13 +2,18 @@ package com.qst.bean;
 
 import java.math.BigDecimal;
 import java.util.Date;
+/**
+* @描述:订单类
+* @创建人:OOImtired
+* @创建时间:2021/1/3
+*/
 
 public class Order {
-    private String orderId;
-    private Date createTime;
-    private BigDecimal price;
-    private Integer status;
-    private Integer userId;
+    private String orderId;//订单号
+    private Date createTime;//下单时间
+    private BigDecimal price;//总价
+    private Integer status;//发货状态
+    private Integer userId;//用户Id
 
     public Order() {
     }

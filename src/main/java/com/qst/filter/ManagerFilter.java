@@ -12,6 +12,16 @@ public class ManagerFilter implements Filter {
     }
 
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
+        /**
+        * @描述:过滤用户和管理员身份
+        * @参数注释:
+        * @param: req
+         * @param: resp
+         * @param: chain
+        * @返回值:void
+        * @创建人:OOImtired
+        * @创建时间:2021/1/3
+        */
         HttpServletRequest httpServletRequest = (HttpServletRequest) req;
 
         Object user = httpServletRequest.getSession().getAttribute("user");

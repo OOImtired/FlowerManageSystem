@@ -1,5 +1,10 @@
 package com.qst.bean;
 
+/**
+* @描述:鲜花类
+* @创建人:OOImtired
+* @创建时间:2021/1/3
+*/
 public class Flower {
 
     private Integer id;
