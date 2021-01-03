@@ -73,7 +73,6 @@
 
 </head>
 <body>
-	
 	<div id="header">
 		<img class="logo_img" style=" margin-right:60px;  height: 200px; width: 200px; border-radius: 50%" alt="" src="/FlowerManageSystem/static/img/花店logo.jpg" >
 			<span class="wel_word" style="font-size: 40px; margin-top: 70px">一间花店</span>

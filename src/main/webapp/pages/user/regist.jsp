@@ -24,7 +24,7 @@
 		})
 	</script>
 
-	<script>
+	<%--<script>
 
 		function validate() {
 
@@ -53,7 +53,7 @@
 			return true;
 		}
 	</script>
-
+--%>
 	<style type="text/css">
 	.login_form{
 		height:480px;

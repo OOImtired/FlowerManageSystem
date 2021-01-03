@@ -26,7 +26,7 @@
 	
 	<div id="header">
 		<img class="logo_img" style=" margin-right:60px;  height: 200px; width: 200px; border-radius: 50%" alt="" src="/FlowerManageSystem/static/img/花店logo.jpg" >
-		<span class="wel_word" style="margin-top: 60px">订单管理系统</span>
+		<span class="wel_word" style="margin-top: 60px">订单管理</span>
 		<%@ include file="/pages/common/manage_common.jsp"%>
 	</div>
 	

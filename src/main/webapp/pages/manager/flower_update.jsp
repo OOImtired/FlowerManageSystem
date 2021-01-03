@@ -51,7 +51,7 @@
 						</c:if>
 						<c:if test="${requestScope.flower.imgPath != null}">
 							<td><input name="imgPath" type="text" value="${requestScope.flower.imgPath}"><br>
-								<a href="pages/manager/flower_pic.jsp?id=${requestScope.flower.id}&imgPath=${requestScope.flower.imgPath}">点击更改图片</a>
+								<a style="color: #FCD1D1;" href="pages/manager/flower_pic.jsp?id=${requestScope.flower.id}&imgPath=${requestScope.flower.imgPath}">点击更改图片</a>
 							</td>
 						</c:if>
 						<td><input type="submit" value="提交"/></td>
